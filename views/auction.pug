@@ -1,0 +1,10 @@
+extends layout
+
+block content
+        div(id="fon")
+            div(id="smole_fon")
+                p(id="name") Аукцион картин
+                p(id="men")="Приветствую "+peopleId.name
+                p(id="picture" onclick="redirect1("+peopleId.id+")")= "Текущая картина"
+                p(id="information" onclick="redirect2("+peopleId.id+")")= "Информация по торгам"
+                p(id="buy" onclick="redirect3("+peopleId.id+")")= "Покупки"

@@ -1,0 +1,39 @@
+extends layout
+
+block content
+        div(id="fon")
+            p(
+                id="home"
+                onclick="redirectHome()"
+            )="Домой"
+            p(id="name") Картины аукциона
+            div(id="smole_fon")
+                div(id="table_fon")
+                    table(
+                        class="table"
+                        border="2"
+                        id="idWalkTable"
+                    )
+                        tr
+                            th Название картины
+                            th Автор
+                            th добавление в аукцион
+                            th(hidden) "id"
+                        each val in pictures
+                            tr
+                                th(onclick="redirect(" + val.id + ")")=val.name
+                                th=val.author
+                                th
+                                    input(
+                                        type="text"
+                                        name="id"
+                                        value=val.id
+                                        hidden
+                                    )
+                                    input(
+                                        id="botton"
+                                        type="submit"
+                                        value=val.auction
+                                        onclick="save("+val.id+")"
+                                    )
+                                th(hidden)=val.id

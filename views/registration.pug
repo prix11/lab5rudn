@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div(id="fon")
+        div(id="smole_fon")
+                p(id="title") Регистрация
+                input(
+                        id="name"
+                        placeholder = "Введите имя"
+                        required
+                )
+                input(
+                        id="money"
+                        placeholder = "Введите запас ден. средств"
+                        required
+                )
+                button(
+                        id="join"
+                        onclick="registrated("+people.length+")"
+                )="Зарегистрировать"
+                ul(id="data")

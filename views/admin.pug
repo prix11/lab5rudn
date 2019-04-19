@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    div(id="fon")
+        div(id="smole_fon")
+                p(id="name") Аукцион картин
+                p(id="pictures" onclick="redirect1()")= "Картины аукциона"
+                p(id="people" onclick="redirect2()")= "Участники аукциона"
+                p(id="setting_auction" onclick="redirect3()")= " Условия проведения"

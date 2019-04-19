@@ -1,0 +1,9 @@
+#fon{position:fixed;top:0;left:0;height:100%;width:100%;background-image:url(/images/pic1_1.jpg);background-color:#e6e6fa}
+#smole_fon{position:absolute;top:100px;left:15%;width:20%;height:250px;background-color:#e6e6fa;border:2px solid #4169e1;opacity:.8;padding:2%;line-height:2}
+#entry{position:fixed;font-style:italic;color:#000;top:100px;left:400px;font-size:24px}
+#nickname{position:fixed;font-style:italic;color:#000;top:150px;left:400px;font-size:20px}
+#text_nickname{position:fixed;font-style:italic;color:#000;top:130px;left:300px;font-size:20px}
+#password{position:fixed;font-style:italic;color:#000;top:200px;left:400px;font-size:20px}
+#text_password{position:fixed;font-style:italic;color:#000;top:180px;left:300px;font-size:20px}
+#register{position:fixed;font-style:italic;color:#000;top:250px;left:580px;font-size:20px}
+#auctioners{position:fixed;font-style:italic;color:#000;top:310px;left:390px;font-size:20px}

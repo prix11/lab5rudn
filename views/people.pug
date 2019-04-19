@@ -1,0 +1,38 @@
+extends layout
+
+block content
+        div(id="fon")
+            p(
+                id="home"
+                onclick="redirectHome()"
+            )="Домой"
+            p(id="name") Участники аукциона
+            div(id="smole_fon")
+                div(id="table_fon")
+                    table(
+                        class="table"
+                        border="2"
+                        id="table_people"
+                    )
+                        tr
+                            th Участник
+                            th Запас денежных средств
+                            th(hidden) "id"
+                        each val in people
+                            -if (val != null)
+                                tr
+                                    th(id="namep")=val.name
+                                    th
+                                        input(
+                                        id="money"+val.id
+                                        type="text"
+                                        name="money"
+                                        value=val.money
+                                        )
+                                        input(
+                                            type="text"
+                                            name="id"
+                                            value=val.id
+                                            hidden
+                                        )
+                                    th(hidden)=val.id

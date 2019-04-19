@@ -1,0 +1,6 @@
+#fon{position:fixed;top:0;left:0;height:100%;width:100%;background-image:url(/images/pic1_1.jpg);background-color:#e6e6fa}
+#smole_fon{position:absolute;top:100px;left:15%;width:20%;height:250px;background-color:#e6e6fa;border:2px solid #4169e1;opacity:.8;padding:2%;line-height:2}
+#title{position:fixed;font-style:italic;color:#000;top:90px;left:370px;font-size:36px}
+#name{position:fixed;font-style:italic;color:#000;top:200px;left:370px;font-size:16px}
+#money{position:fixed;font-style:italic;color:#000;top:240px;left:370px;font-size:16px}
+#join{position:fixed;font-style:italic;color:#000;top:280px;left:370px;font-size:16px}

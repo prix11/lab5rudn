@@ -1,0 +1,68 @@
+extends layout
+
+block content
+    div(id="fon")
+        p(id="home", onclick=`redirectHome(${person.id})`)="Домой"
+        div(id="smole_fon")
+            p(id="name") Аукцион картин
+            p(id="men")="Приветствую "+person.name
+        div(id="buttons")
+            if isMember
+                script
+                    | window.id = #{person.id}
+
+                span(id = "isMember", hidden) "Вы участник"
+                span(id = "saveMoneyText")="Ваш баланс:"
+                input(id="money", type="text", name="money", value=person.money, required)
+                button(id="saveMoney", onclick=`saveMoney(${person.id})`) Сохранить
+                br
+                span(id = "placeBetText" onclick=`bet()`)="Сделать ставку:"
+                input(id="placeBet", type="text", name="money", placeholder="min bet")
+                button(id="bet") Сделать ставку
+                div(id="pic_timer")="До конца аукциона по картине:"
+                div(class="timer")
+                    div(class="timer_section")
+                        div(class="minutes_1") 0
+                        div(class="minutes_2") 0
+                        div(class="timer_section_desc") минут
+                    div(class="timer_delimetr") :
+                    div(class="timer_section")
+                        div(class="seconds_1") 0
+                        div(class="seconds_2") 0
+                        div(class="timer_section_desc") секунд
+            else
+                span(id = "isMember") Вы не учавствуете
+                button(id="register", onclick=`register(${person.id})`) Присоединиться к торгам
+            div(id="window")
+                ul(id="wind")
+
+        div(id="auc_timer")="До конца аукциона:"
+        div(id="countdown", class="countdownHolder")
+            span(class="countDays")
+                span(class="position")
+                    span(class="digit static")
+                span(class="position")
+                    span(class="digit static")
+
+            span(class="countHours")
+                span(class="position")
+                    span(class="digit static")
+                span(class="position")
+                    span(class="digit static")
+
+            span(class="countDiv countDiv1")
+
+            span(class="countMinutes")
+                span(class="position")
+                    span(class="digit static")
+                span(class="position")
+                    span(class="digit static")
+
+            span(class="countDiv countDiv2")
+
+            span(class="countSeconds")
+                span(class="position")
+                    span(class="digit static")
+                span(class="position")
+                    span(class="digit static")
+

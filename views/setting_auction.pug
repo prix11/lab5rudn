@@ -1,0 +1,113 @@
+extends layout
+
+block content
+        div(id="fon")
+            script
+                | window.id = -1
+            p(
+                id="home"
+                onclick="Home()"
+            )="Домой"
+            p(id="name") Условия проведения
+            div(id="smole_fon")
+                    br
+                    | Дата . . . . . . . . . . . . . . . . . .
+                    input(
+                        type="text"
+                        name="data"
+                        id="data"
+                        value=auction.data
+                        required
+                    )
+                    br
+                    | Время . . . . . . . . . . . . . . . . .
+                    input(
+                        type="text"
+                        id="time"
+                        name="time"
+                        value=auction.time
+                        required
+                    )
+                    br
+                    | Таймаут продажи картины.
+                    input(
+                        type="text"
+                        name="timeout"
+                        id="timeout"
+                        value=auction.timeout
+                        required
+                    )
+                    br
+                    | Интервал времени отсчета до окончания торга по картине . . . . . . . . . . . . . . .
+                    input(
+                        type="text"
+                        name="interval"
+                        id="interval"
+                        value=auction.interval
+                        required
+                    )
+                    br
+                    | Паузы на изучение информации. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                    input(
+                        type="text"
+                        name="pause"
+                        id="pause"
+                        value=auction.pause
+                        required
+                    )
+                    br
+                    br
+                    input(
+                        id="botton"
+                        type="submit"
+                        value="Сохранить"
+                        onclick="saveA(\"trtr\")"
+                    )
+                    input(
+                    id="start"
+                    type="submit"
+                    value="Начать аукцион"
+                    onclick="start()"
+                    )
+            div(id="window")
+                div(id="pic_timer")="До конца аукциона по картине:"
+                div(class="timer")
+                    div(class="timer_section")
+                        div(class="minutes_1") 0
+                        div(class="minutes_2") 0
+                        div(class="timer_section_desc") минут
+                    div(class="timer_delimetr") :
+                    div(class="timer_section")
+                        div(class="seconds_1") 0
+                        div(class="seconds_2") 0
+                        div(class="timer_section_desc") секунд
+                ul(id="wind")
+            div(id="auc_timer")="До конца аукциона:"
+            div(id="countdown", class="countdownHolder")
+                span(class="countDays")
+                    span(class="position")
+                        span(class="digit static")
+                    span(class="position")
+                        span(class="digit static")
+
+                span(class="countHours")
+                    span(class="position")
+                        span(class="digit static")
+                    span(class="position")
+                        span(class="digit static")
+
+                span(class="countDiv countDiv1")
+
+                span(class="countMinutes")
+                    span(class="position")
+                        span(class="digit static")
+                    span(class="position")
+                        span(class="digit static")
+
+                span(class="countDiv countDiv2")
+
+                span(class="countSeconds")
+                    span(class="position")
+                        span(class="digit static")
+                    span(class="position")
+                        span(class="digit static")

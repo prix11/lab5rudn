@@ -1,0 +1,9 @@
+#fon{position:fixed;top:0;left:0;height:100%;width:100%;background-image:url(/images/pic2_1.jpg);background-color:#ffe4e1}
+#smole_fon{background-color:#ffe4e1;border:2px solid #e9967a;position:absolute;top:100px;left:10%;height:580px;width:50%;opacity:.8;padding:2%;line-height:2}
+#picture{position:fixed;top:145px;left:717px}#name{font-size:36px;font-style:italic;color:#000;position:fixed;top:10px;left:1300px}
+#home{font-size:30px;font-style:italic;color:#e9967a;position:absolute;left:20px}
+input{background-color:#ffe4e1;border:2px solid #e9967a}
+#description{background-color:#ffe4e1;border:2px solid #e9967a;height:200px;width:465px;margin:3px;padding:5px 0 5px 5px;font-size:14px}
+#botton{font-size:20px;font-style:italic;color:#000}
+#buy{font-size:20px;font-style:italic;color:black;position:fixed;top:670px;left:300px}
+#price{font-size:20px;font-style:italic;color:black;position:fixed;top:670px;left:700px}

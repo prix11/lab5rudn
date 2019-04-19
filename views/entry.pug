@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div(id="fon")
+        div(id="smole_fon")
+            span(id = "entry") Вход на аукцион
+            p(id="text_nickname") Логин
+            input(id="nickname", placeholder = "Имя администратора", required)
+            p(id="text_password") Пароль
+            input(id="password", placeholder = "Пароль", required)
+            button(id="register", onclick=`entry()`) Войти
+            button(id="auctioners", onclick=`auctioners()`) Войти как пользователь

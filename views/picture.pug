@@ -1,0 +1,95 @@
+extends layout
+
+block content
+        div(id="fon")
+            p(
+                id="home"
+                onclick="redirectHome()"
+            )="Назад"
+            p(id="name") Карточка картины
+            div(id="smole_fon")
+                    | Название картины. . . . . . . . . . .
+                    input(
+                        id="namepic"
+                        type="text"
+                        name="name"
+                        value=picture.name
+                        required
+                    )
+                    br
+                    img(
+                        id="picture"
+                        alt=picture.image
+                        src=picture.image
+                    )
+                    br
+                    | Автор. . . . . . . . . . . . . . . . . . . . .
+                    input(
+                        id="authorpic"
+                        type="text"
+                        name="author"
+                        value=picture.author
+                        required
+                    )
+                    br
+                    | Описание
+                    br
+                    - var text=picture.description
+                    textarea(
+                        rows=10
+                        id="description"
+                        name="description"
+                        value=text
+                        required
+                    ).form-control=text
+                    br
+                    | Начальная цена . . . . . . . . . . . .
+                    input(
+                    id="pricepic"
+                    type="text"
+                    name="price"
+                    value=picture.price
+                    required
+                    )
+                    br
+                    | Минимальный шаг аукциона . .
+                    input(
+                    type="text"
+                    id="minpic"
+                    name="min_step"
+                    value=picture.min_step
+                    required
+                    )
+                    br
+                    | Максимальный шаг аукциона. .
+                    input(
+                    type="text"
+                    id="maxpic"
+                    name="max_step"
+                    value=picture.max_step
+                    required
+                    )
+                    br
+                    br
+                    input(
+                        id="idpic"
+                        type="text"
+                        name="id"
+                        value=picture.id
+                        hidden
+                    )
+                    input(
+                    id="statuspic"
+                    type="text"
+                    name="auction"
+                    value=picture.auction
+                    hidden
+                    )
+                    input(
+                        id="botton"
+                        type="submit"
+                        value="Сохранить"
+                        onclick="save("+picture.id+")"
+                    )
+                    p(id="buy")="Продана: "+picture.buy
+                    p(id="price")="За цену: "+picture.priceBay
